@@ -31,12 +31,12 @@ Blockly.Blocks['robot_switch_settings'] = {
 	init: function () {
 		this.setHelpUrl('http://www.example.com/');
 		this.setColour(0);
-		this.appendDummyInput().appendField(new Blockly.FieldDropdown([
+		this.appendValueInput().appendField(new Blockly.FieldDropdown([
 			["one", 1],
 			["two", 2],
 			["three", 3]
 		]), "PORT")
-		.appendField(new Blockly.FieldDropdown([["on", 1], ["off", 0]]), "STATE");
+		this.appendValueInput().appendField(new Blockly.FieldDropdown([["on", 1], ["off", 0]]), "STATE");
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
 		this.setTooltip('');
