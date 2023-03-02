@@ -3,7 +3,7 @@ import time
 def init():
     pass
 
-def set(time):
+def set(seconds):
     print('sleep')
-    time.sleep(int(time))
+    time.sleep(seconds)
     return 0
