@@ -19,6 +19,15 @@ Blockly.JavaScript['robot_motor_power'] = function (block) {
 	return code;
 };
 
+Blockly.JavaScript['robot_sleep'] = function (block) {
+	var value_sleep = Blockly.JavaScript.valueToCode(block, 'SLEEP',
+		Blockly.JavaScript.ORDER_ATOMIC);
+	// Generate the code ...
+	var code = 'runPiRobotCommand("setRobotSleep", "' + value_sleep + ');';
+	return code;
+};
+
+
 Blockly.JavaScript['robot_switch_settings'] = function (block) {
 	let port = block.getFieldValue('PORT');
 	let value = Blockly.JavaScript.valueToCode(block, 'ONOFF',

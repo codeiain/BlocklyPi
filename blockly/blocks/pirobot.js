@@ -12,6 +12,18 @@ Blockly.Blocks['robot_motor_power'] = {
 		this.setTooltip('');
 	}
 };
+
+Blockly.Blocks['robot_sleep'] = {
+	init: function () {
+		this.setHelpUrl('http://www.example.com/');
+		this.setColour(0);
+		this.appendValueInput("SLEEP").setCheck("Number")
+		this.setPreviousStatement(true);
+		this.setNextStatement(true);
+		this.setTooltip('');
+	}
+};
+
 Blockly.Blocks['robot_switch_settings'] = {
 	init: function () {
 		this.setHelpUrl('http://www.example.com/');
