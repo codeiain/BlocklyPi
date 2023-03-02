@@ -4,6 +4,6 @@ def init():
     pass
 
 def set(time):
-    time.sleep(time)
-
+    print('sleep')
+    time.sleep(int(time))
     return 0
