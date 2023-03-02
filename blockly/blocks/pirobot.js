@@ -16,11 +16,14 @@ Blockly.Blocks['robot_switch_settings'] = {
 	init: function () {
 		this.setHelpUrl('http://www.example.com/');
 		this.setColour(0);
-		this.appendValueInput("PORT").setCheck(['on','off']).appendField(new Blockly.FieldDropdown([
-			["Set switch one to", 1],
-			["Set switch two to", 2],
-			["Set switch three to", 3]
-		]), "SWITCH")
+		this.appendValueInput("PORT").setCheck(['On', 'Off']).appendField(
+			new Blockly.FieldDropdown(
+				[
+					["Set switch one to", "ONE"],
+					["Set switch two to", "TWO"],
+					["Set switch three to", "THREE"]
+				]
+			), "STATE")
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
 		this.setTooltip('');

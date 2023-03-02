@@ -20,10 +20,25 @@ Blockly.JavaScript['robot_motor_power'] = function (block) {
 };
 
 Blockly.JavaScript['robot_switch_settings'] = function (block) {
-	var port = Blockly.JavaScript.valueToCode(block, 'PORT', Blockly.JavaScript.ORDER_ATOMIC);
-	var value = Blockly.JavaScript.valueToCode(block, 'STATE', Blockly.JavaScript.ORDER_ATOMIC);
+	let port = block.getFieldValue('PORT');
+	let value = block.getFieldValue('STATE');
+	let state = 0;
+	let portcode = 0;
+	if (value == 'on') {
+		state = 1
+	}
+	if (port == 'ONE') {
+		portcode = 1
+	}
+	if (port == 'TWO'){
+		portcode = 2
+	}
+	if (port == 'THREE'){
+		portcode = 3
+	}
 
-	var code = 'runPiRobotCommand("setRobotSwitch", "' + port + '",' + value + ');';
+	var code = 'runPiRobotCommand("setRobotSwitch", "' + portcode + '",' + state + ');';
+	return code;
 }
 
 
