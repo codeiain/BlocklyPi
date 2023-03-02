@@ -21,7 +21,8 @@ Blockly.JavaScript['robot_motor_power'] = function (block) {
 
 Blockly.JavaScript['robot_switch_settings'] = function (block) {
 	let port = block.getFieldValue('PORT');
-	let value = block.getFieldValue('ONOFF');
+	let value = Blockly.JavaScript.valueToCode(block, 'ONOFF',
+		Blockly.JavaScript.ORDER_ATOMIC);
 	alert(port);
 	alert(value);
 	let state = 0;
@@ -32,10 +33,10 @@ Blockly.JavaScript['robot_switch_settings'] = function (block) {
 	if (port == 'ONE') {
 		portcode = 1
 	}
-	if (port == 'TWO'){
+	if (port == 'TWO') {
 		portcode = 2
 	}
-	if (port == 'THREE'){
+	if (port == 'THREE') {
 		portcode = 3
 	}
 
