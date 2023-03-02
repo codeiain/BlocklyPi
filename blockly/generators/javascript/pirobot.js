@@ -21,7 +21,7 @@ Blockly.JavaScript['robot_motor_power'] = function (block) {
 
 Blockly.JavaScript['robot_switch_settings'] = function (block) {
 	let port = block.getFieldValue('PORT');
-	let value = block.getFieldValue('STATE');
+	let value = block.getFieldValue('ONOFF');
 	alert(port);
 	alert(value);
 	let state = 0;
