@@ -294,11 +294,17 @@
                 </value>
             </block>
             <block type="robot_switch_settings">
-                <value name="PORT"></value>
+                <value name="PORT">
+                    <block type="status">
+                        <field>on</field>
+                    </block>
+                </value>
             </block>
         </category>
         <category id="keyCat" name="Keys">
-            <block type="control_key_down"></block>
+            <block type="control_key_down">
+
+            </block>
         </category>
 
         <sep></sep>
