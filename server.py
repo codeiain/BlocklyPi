@@ -1,6 +1,7 @@
 import SimpleHTTPServer
 import SimpleXMLRPCServer
 import robot.setMotorPower as RobotMotorPower
+import robot.setSwitches as RobotSwitch
 
 def registerRobotXmlRpcMethods(server):
     
@@ -9,8 +10,9 @@ def registerRobotXmlRpcMethods(server):
     
     # Register the motor power command function.
     RobotMotorPower.init()
+    RobotSwitch.init()
     server.register_function(RobotMotorPower.set,'setRobotMotorPower')
-
+    server.register_function(RobotSwitch.set, 'setRobotSwitch')
 
     
     
