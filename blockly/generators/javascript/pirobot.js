@@ -23,8 +23,8 @@ Blockly.JavaScript['robot_sleep'] = function (block) {
 	var value_sleep = Blockly.JavaScript.valueToCode(block, 'SLEEP',
 		Blockly.JavaScript.ORDER_ATOMIC);
 	// Generate the code ...
-	alert(value_sleep)
-	var code = 'runPiRobotCommand("setRobotSleep", "' + value_sleep + ');';
+
+	var code = 'runPiRobotCommand("setRobotSleep", ' + value_sleep + ');';
 	return code;
 };
 
