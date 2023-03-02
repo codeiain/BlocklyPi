@@ -24,6 +24,9 @@ Blockly.JavaScript['robot_switch_settings'] = function (block) {
 	let value = Blockly.JavaScript.valueToCode(block, 'ONOFF',
 		Blockly.JavaScript.ORDER_ATOMIC);
 	value = value.replace(/'/g, '')
+
+	alert(value)
+
 	let portcode = 0;
 
 	if (port == 'ONE') {
