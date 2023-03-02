@@ -9,21 +9,21 @@ def set(port, status):
     port = int(port)
     status = int(status)
     if port == 1:
-        if status == 1:
+        if status == 'True':
             GPIO.output(5, GPIO.HIGH)
         elif status == 0:
             GPIO.output(5,GPIO.LOW)
         else:
             pass
     elif port == 2:
-        if status == 1:
+        if status == 'True':
             GPIO.output(6, GPIO.HIGH)
         elif status == 0:
             GPIO.output(6,GPIO.LOW)
         else:
             pass
     elif port == 3:
-        if status == 1:
+        if status == 'True':
             GPIO.output(13, GPIO.HIGH)
         elif status == 0:
             GPIO.output(13,GPIO.LOW)
@@ -31,3 +31,5 @@ def set(port, status):
             pass
     else:
         print('Wrong Command: Example--switch(3, 1)->to switch on port3')
+
+    return 0

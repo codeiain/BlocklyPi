@@ -26,11 +26,8 @@ Blockly.JavaScript['robot_switch_settings'] = function (block) {
 	alert(port);
 	value = value.replace(/'/g, '')
 	alert(value);
-	let state = 0;
 	let portcode = 0;
-	if (value == 'on') {
-		state = 1
-	}
+
 	if (port == 'ONE') {
 		portcode = 1
 	}
@@ -41,7 +38,7 @@ Blockly.JavaScript['robot_switch_settings'] = function (block) {
 		portcode = 3
 	}
 
-	var code = 'runPiRobotCommand("setRobotSwitch", "' + portcode + '",' + state + ');';
+	var code = 'runPiRobotCommand("setRobotSwitch", "' + portcode + '",' + value + ');';
 	return code;
 }
 
