@@ -10,21 +10,21 @@ def set(port, status):
     print (port)
     port = int(port)
     if port == 1:
-        if status == 'true':
+        if status == True:
             GPIO.output(5, GPIO.HIGH)
         elif status == 0:
             GPIO.output(5,GPIO.LOW)
         else:
             pass
     elif port == 2:
-        if status == 'true':
+        if status == True:
             GPIO.output(6, GPIO.HIGH)
         elif status == 0:
             GPIO.output(6,GPIO.LOW)
         else:
             pass
     elif port == 3:
-        if status == 'true':
+        if status == True:
             GPIO.output(13, GPIO.HIGH)
         elif status == 0:
             GPIO.output(13,GPIO.LOW)
