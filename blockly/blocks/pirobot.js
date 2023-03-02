@@ -17,7 +17,7 @@ Blockly.Blocks['robot_sleep'] = {
 	init: function () {
 		this.setHelpUrl('http://www.example.com/');
 		this.setColour(0);
-		this.appendValueInput("SLEEP").setCheck("Number")
+		this.appendValueInput("SLEEP").setCheck("Number").appendField('Sleep for seconds')
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
 		this.setTooltip('');
