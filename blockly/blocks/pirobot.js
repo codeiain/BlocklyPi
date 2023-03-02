@@ -12,6 +12,21 @@ Blockly.Blocks['robot_motor_power'] = {
 		this.setTooltip('');
 	}
 };
+Blockly.Blocks['robot_switch_settings'] = {
+	init: function () {
+		this.setHelpUrl('http://www.example.com/');
+		this.setColour(0);
+		this.appendValueInput().appendField(new Blockly.FieldDropdown([
+			["Set switch one to", 1],
+			["Set switch two to", 2],
+			["Set switch three to", 3]
+		]), "PORT")
+		this.setPreviousStatement(true);
+		this.setNextStatement(true);
+		this.setTooltip('');
+	}
+}
+
 
 Blockly.Blocks['control_key_down'] = {
 	init: function () {
@@ -27,18 +42,3 @@ Blockly.Blocks['control_key_down'] = {
 	}
 };
 
-Blockly.Blocks['robot_switch_settings'] = {
-	init: function () {
-		this.setHelpUrl('http://www.example.com/');
-		this.setColour(0);
-		this.appendValueInput().appendField(new Blockly.FieldDropdown([
-			["one", 1],
-			["two", 2],
-			["three", 3]
-		]), "PORT")
-		this.appendValueInput().appendField(new Blockly.FieldDropdown([["on", 1], ["off", 0]]), "STATE");
-		this.setPreviousStatement(true);
-		this.setNextStatement(true);
-		this.setTooltip('');
-	}
-}
