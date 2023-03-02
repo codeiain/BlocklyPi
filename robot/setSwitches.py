@@ -7,8 +7,10 @@ def init():
 
 def set(port, status):
     print (status)
-    print (port)
+    
     port = int(port)
+    print (port)
+    print (status == 'True')
     if port == 1:
         if status == 'True':
             GPIO.output(5, GPIO.HIGH)
