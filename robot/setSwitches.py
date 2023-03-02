@@ -6,11 +6,10 @@ def init():
     GPIO.setup(13, GPIO.OUT)
 
 def set(port, status):
-    print (status)
-    
     port = int(port)
     print (port)
     print (status == 'True')
+    print (status == True)
     if port == 1:
         if status == 'True':
             GPIO.output(5, GPIO.HIGH)
